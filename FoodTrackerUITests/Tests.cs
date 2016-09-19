@@ -39,10 +39,11 @@ namespace FoodTrackerUITests
 			app = AppInitializer.StartApp(platform);
 		}
 
+
 		[Test]
 		public void EditFoodTest()
 		{
-			
+			//app.Repl();
 			app.Tap(x => x.Marked("Caprese Salad"));
 			app.Screenshot("Tapped on Caprese Salad");
 			app.Tap(x => x.Class("UITextFieldLabel").Marked("Caprese Salad"));

@@ -12,6 +12,7 @@ namespace FoodTrackerUITests
 		{
 
 			const string deviceIDiPhone6s = "7401F2E2-4F5C-4487-8158-9F7380492357";
+			const string deviceIDiPHONE = "fcbb5006c892e39f1f675a3f6804ce3688c3b8d1";
 
 			// TODO: If the iOS or Android app being tested is included in the solution 
 			// then open the Unit Tests window, right click Test Apps, select Add App Project
@@ -38,8 +39,9 @@ namespace FoodTrackerUITests
 				.iOS
 				// TODO: Update this path to point to your iOS app and uncomment the
 				// code if the app is not included in the solution.
-				.AppBundle ("../../../xtr-FoodTracker.app")
-				.DeviceIdentifier(deviceIDiPhone6s)
+				//.AppBundle ("../../../xtr-FoodTracker.app")
+				.DeviceIdentifier(deviceIDiPHONE)
+				.InstalledApp("com.mahdia.FoodTracker")
 				.StartApp();
 		}
 	}
