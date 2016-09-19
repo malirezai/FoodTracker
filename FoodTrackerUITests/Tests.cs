@@ -49,12 +49,14 @@ namespace FoodTrackerUITests
 			app.Tap(x => x.Class("UITextFieldLabel").Marked("Caprese Salad"));
 			app.Screenshot("Editing Text");
 			app.ClearText(x => x.Class("UITextField").Text("Caprese Salad"));
-			app.EnterText(x => x.Class("UITextField"), "Caprese Mixed Salad");
+			app.EnterText(x => x.Class("UITextField"), NAME);
 			app.PressEnter();
 			app.Tap(x => x.Id("filledStar").Index(RATING - 1));
 			app.Screenshot("Tapped on view with class: UIImageView");
 			app.Tap(x => x.Text("Save"));
 			app.Screenshot("Changed Name and Rating then Press Save");
+
+			app.Screenshot($"Looking for {NAME}"); 
 
 			//get rating showed
 			var rating = app.Query(x => x.Class("UITableViewCellContentView")
