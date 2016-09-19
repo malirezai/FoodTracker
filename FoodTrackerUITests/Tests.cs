@@ -66,6 +66,8 @@ namespace FoodTrackerUITests
 			                       .Id("filledStar"))
 			                	   .Count();
 
+			app.Screenshot($"Rating count should be: {rating}");
+
 			Assert.IsTrue(rating == RATING);
 
 		}

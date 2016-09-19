@@ -8,6 +8,9 @@ packages/
 TestResults/
 OLDcalabash.framework/
 
+#xcode user state
+*.xcuserstate
+
 # globs
 Makefile.in
 *.DS_Store
@@ -40,3 +43,4 @@ Thumbs.db
 
 #dotCover
 *.dotCover
+
