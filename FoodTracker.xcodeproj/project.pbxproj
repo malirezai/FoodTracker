@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1126C86D1D91BBD400D41FD7 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1126C86A1D91BBD400D41FD7 /* HockeySDK.framework */; };
+		1126C86E1D91BBD400D41FD7 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1126C86C1D91BBD400D41FD7 /* HockeySDKResources.bundle */; };
 		CA1292781B150DF500303C8D /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1292771B150DF500303C8D /* RatingControl.swift */; };
 		CA1902E01B10E523000271C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902DF1B10E523000271C4 /* AppDelegate.swift */; };
 		CA1902E21B10E523000271C4 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1902E11B10E523000271C4 /* MealViewController.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1126C86A1D91BBD400D41FD7 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		1126C86C1D91BBD400D41FD7 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		CA1292771B150DF500303C8D /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		CA1902DC1B10E523000271C4 /* FoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA1902DF1B10E523000271C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1126C86D1D91BBD400D41FD7 /* HockeySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,9 +70,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1126C8691D91BBD400D41FD7 /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				1126C86A1D91BBD400D41FD7 /* HockeySDK.framework */,
+				1126C86B1D91BBD400D41FD7 /* Resources */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
+			sourceTree = "<group>";
+		};
+		1126C86B1D91BBD400D41FD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1126C86C1D91BBD400D41FD7 /* HockeySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		CA1902D31B10E523000271C4 = {
 			isa = PBXGroup;
 			children = (
+				1126C8691D91BBD400D41FD7 /* HockeySDK.embeddedframework */,
 				CA1902DE1B10E523000271C4 /* FoodTracker */,
 				CA1902F31B10E523000271C4 /* FoodTrackerTests */,
 				CA1902DD1B10E523000271C4 /* Products */,
@@ -190,6 +214,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1902EA1B10E523000271C4 /* LaunchScreen.storyboard in Resources */,
+				1126C86E1D91BBD400D41FD7 /* HockeySDKResources.bundle in Resources */,
 				CA96F92B1B1144F7000CC7F8 /* Assets.xcassets in Resources */,
 				CA1902E51B10E523000271C4 /* Main.storyboard in Resources */,
 			);
@@ -344,6 +369,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -362,6 +391,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HockeySDK-iOS/HockeySDK.embeddedframework",
+				);
 				INFOPLIST_FILE = FoodTracker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mahdia.FoodTracker;

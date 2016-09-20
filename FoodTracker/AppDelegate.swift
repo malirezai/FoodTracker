@@ -8,6 +8,8 @@
 //
 
 import UIKit
+import HockeySDK
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let j = 10
+        let appID = "11111111222222223333333344444444"
+        
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier(appID);
+        BITHockeyManager.sharedHockeyManager().startManager();
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation();
         
         return true
     }
